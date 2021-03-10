@@ -1,5 +1,6 @@
 package tests.gui.yandex;
 
+import forms.yandex.YaResultPage;
 import forms.yandex.YaStartPage;
 import org.testng.annotations.Test;
 import webdriver.BaseTest;
@@ -11,6 +12,9 @@ public class YaSearchTest extends BaseTest {
 
         YaStartPage yaStartPage = new YaStartPage();
         yaStartPage.fillSearchField("someText");
+        yaStartPage.searchBtnClick();
+        YaResultPage yaResultPage = new YaResultPage();
+        yaResultPage.searchBtnIsPresent();
 
     }
 

@@ -6,16 +6,23 @@ import webdriver.BasePage;
 
 public class YaStartPage extends BasePage {
 
-    @FindBy(xpath = "//input[@class='input__control input__input mini-suggest__input']")
-    private WebElement searchFieldTb;
-
     public YaStartPage() {
         super();
     }
 
+    @FindBy(xpath = "//input[@class='input__control input__input mini-suggest__input']")
+    private WebElement searchTb;
+
+    @FindBy(xpath = "//button[text()='Найти']")
+    private WebElement searchBtn;
+
     public void fillSearchField(String text) {
-        searchFieldTb.click();
-        searchFieldTb.sendKeys(text);
+        searchTb.click();
+        searchTb.sendKeys(text);
+    }
+
+    public void searchBtnClick() {
+        searchBtn.click();
     }
 
 }
