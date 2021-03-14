@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM 'http://testng.org/testng-1.0.dtd'>
-<suite name="Яндекс" verbose="10" parallel="tests" thread-count="1">
+<suite name="Yandex" verbose="10" parallel="tests" thread-count="1">
 
-    <test name="YA-1 Проверка поиска">
-        <parameter name="searchText" value="how to make automation framework"/>
+    <test name="YA-1 The search button display on the result page">
+        <parameter name="searchText" value="how to make automation framework?"/>
         <classes>
             <class name="tests.gui.yandex.YaSearchTest"/>
         </classes>

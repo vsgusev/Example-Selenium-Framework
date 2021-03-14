@@ -25,4 +25,8 @@ public class YaStartPage extends BasePage {
         searchBtn.click();
     }
 
+    public boolean searchBtnIsPresent() {
+        return searchBtn.isDisplayed();
+    }
+
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static webdriver.BaseTest.getDriver;
 
-public abstract class BasePage {
+public abstract class BasePage extends BaseEntity {
 
     WebDriver driver;
 

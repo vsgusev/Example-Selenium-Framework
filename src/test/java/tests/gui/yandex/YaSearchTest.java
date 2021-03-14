@@ -19,12 +19,18 @@ public class YaSearchTest extends BaseTest {
         this.searchText = searchText;
     }
 
-    @Test(description = "YA-1 Проверка поиска")
+    @Test(description = "YA-1 The search button display on the result page")
     public void SearchTest() {
 
+        logStep(1, "Check the search button display on the start page");
         YaStartPage yaStartPage = new YaStartPage();
+        assertTrue(yaStartPage.searchBtnIsPresent());
+
+        logStep(2, "Enter a query and click the search button");
         yaStartPage.fillSearchField(searchText);
         yaStartPage.searchBtnClick();
+
+        logStep(3, "Check the search button display on the results page");
         YaResultPage yaResultPage = new YaResultPage();
         assertTrue(yaResultPage.searchBtnIsPresent());
 

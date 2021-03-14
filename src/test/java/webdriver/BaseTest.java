@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 
-public abstract class BaseTest {
+public abstract class BaseTest extends BaseEntity {
 
     private static WebDriver driver;
 
